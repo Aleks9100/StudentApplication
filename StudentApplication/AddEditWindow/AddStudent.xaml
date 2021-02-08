@@ -1,0 +1,97 @@
+﻿<Window x:Class="StudentApplication.AddEditWindow.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentApplication.AddEditWindow"
+        mc:Ignorable="d"
+        Title="Student-Add" Height="450" Width="800" WindowState="Maximized" Closed="Window_Closed">
+    <Window.Resources>
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0,0,0,0.75"/>
+            <Setter Property="BorderBrush" Value="#4682B4"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="5,0"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0,0,0,0.75"/>
+            <Setter Property="BorderBrush" Value="#4682B4"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="#4682B4"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="#4682B4"/>
+        <Grid Grid.Column="2" Background="#4682B4"/>
+        <Grid Grid.Column="1" Background="#4682B4"/>
+        <Grid Grid.Column="3" Background="#4682B4"/>
+        <Grid Grid.Column="4" Background="#4682B4"/>
+        <Image Source="notebook.png" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="7" Stretch="Fill"></Image>
+        <Grid Grid.Row="1" Background="#4682B4"/>
+        <Grid Grid.Row="2" Background="#4682B4"/>
+        <Grid Grid.Row="3" Background="#4682B4"/>
+        <Grid Grid.Row="4" Background="#4682B4"/>
+        <Grid Grid.Row="5" Background="#4682B4"/>
+        <Grid Grid.Row="6" Background="#4682B4"/>
+        <Grid Grid.Row="7" Background="#4682B4"/>
+        <Grid Grid.Row="8" Background="#4682B4"/>
+        <Grid Grid.Row="1" Grid.Column="4" Background="#4682B4"/>
+        <Grid Grid.Row="2" Grid.Column="4" Background="#4682B4"/>
+        <Grid Grid.Row="3" Grid.Column="4" Background="#4682B4"/>
+        <Grid Grid.Row="4" Grid.Column="4" Background="#4682B4"/>
+        <Grid Grid.Row="5" Grid.Column="4" Background="#4682B4"/>
+        <Grid Grid.Row="6" Grid.Column="4" Background="#4682B4"/>
+        <Grid Grid.Row="7" Grid.Column="4" Background="#4682B4"/>
+        <Grid Grid.Row="8" Grid.Column="4" Background="#4682B4"/>
+        <Grid Grid.Row="8" Grid.Column="1" Background="#4682B4"/>
+        <Grid Grid.Row="8" Grid.Column="2" Background="#4682B4"/>
+        <Grid Grid.Row="8" Grid.Column="3" Background="#4682B4"/>
+        <TextBlock x:Name="TB_Title" Grid.ColumnSpan="4" FontSize="35" TextWrapping="Wrap" HorizontalAlignment="Stretch" TextAlignment="Center" Text="Студент добавление"/>
+        <TextBlock Text="Фамилия" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+        <TextBlock Text="Имя" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+        <TextBlock Text="Отчество" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
+        <TextBlock Text="Год поступления" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"/>
+        <TextBlock Text="Стипендия" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"/>
+        <TextBlock Text="Группа" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"/>
+        <TextBox x:Name="TB_LastName" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox x:Name="TB_FirstName" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox x:Name="TB_MiddleName" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center"/>
+        <ComboBox x:Name="CB_Year_of_admission" Grid.Column="2" Grid.Row="4" VerticalAlignment="Center"/>
+        <TextBox x:Name="TB_Scholarship" Grid.Column="2" Grid.Row="5" VerticalAlignment="Center"/>
+        <ComboBox x:Name="CB_Group" SelectedValuePath="GroupID" DisplayMemberPath="Title" Grid.Column="2" Grid.Row="6" VerticalAlignment="Center"/>
+        <TextBlock Text="Фото" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+        <Image x:Name="I_Student" Grid.Column="3" Grid.Row="2" Grid.RowSpan="4" MouseLeftButtonUp="I_Student_MouseLeftButtonUp"/>
+        <Button Grid.Row="7" Grid.ColumnSpan="5" Width="100" VerticalAlignment="Center" Content="ОК" Click="OK_Click" HorizontalAlignment="Left"/>
+        <Button Grid.Row="7" Grid.ColumnSpan="5" Width="100" VerticalAlignment="Center" Content="Отмена" Click="Cancel_Click" HorizontalAlignment="Right"/>
+    </Grid>
+</Window>
